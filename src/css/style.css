@@ -44,7 +44,7 @@ body {
         transition: all 300ms linear;
 
         display: block;
-        height: 300vh;
+        height: 350vh;
         position: relative;
 
         * {
@@ -169,6 +169,82 @@ body {
         }
     }
 
+    section.project {
+        .container {
+            display: flex;
+            justify-content: center;
+            vertical-align: center;
+
+            flex-direction: row;
+
+            .block {
+                position: relative;
+
+                background-color: #ededed;
+
+                border-radius: 5px;
+
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+                vertical-align: center;
+                text-align: center;
+
+                width: 15em;
+                height: 15em;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .more {
+                    position: absolute;
+
+                    background-color: rgba(31, 32, 41, 0.5);
+
+                    width: 100%;
+                    height: 0;
+                    bottom: 0;
+
+                    border-radius: 5px;
+
+                    .content_more {
+                        width: 100%;
+                        height: 100%;
+
+                        display: none;
+                    }
+
+                    transition-duration: 250ms;
+                }
+                transition-duration: 250ms;
+            }
+
+            .block:nth-child(2) {
+                margin: 0 4vw;
+            }
+
+            .block:hover {
+                top: -5px;
+                box-shadow: 15px 15px 15px #50173B;
+
+                img {
+                    display: none;
+                }
+
+                .more {
+                    height: 100%;
+
+                    .content_more {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
     footer {
         background-color: #6F1E51;
         width: 100%;
@@ -237,6 +313,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .shadow {
     box-shadow: 7px 7px 7px #666;
+    position: relative;
+    transition: all 0.2s;
+    top: 0;
+}
+
+.shadow_red {
+    box-shadow: 7px 7px 7px #50173B;
     position: relative;
     transition: all 0.2s;
     top: 0;

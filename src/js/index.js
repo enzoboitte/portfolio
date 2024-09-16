@@ -27,13 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 let scale = 1 + scrollPercent * 1;
 
                 circleBackground.style.display = "block";
-                circleBackground.style.transform = `scale(${scale})`;
+                circleBackground.style.transform = `scale(${scale <= 1 ? 1 : scale})`;
 
                 scale = 0.5 + scrollPercent * 0.8; // Zoom de 1 à 2
                 title.style.transform = `scale(${scale >= 1 ? 1 : (scale <= scaleBase ? scaleBase : scale)})`;
             } else if (Position.bottom - targetPosition.bottom <= 0)
             {
-                console.log("---------")
                 targetDiv.style.bottom = "0";
                 targetDiv.style.position = "absolute";
                 circleBackground.style.display = "none";
