@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 targetDiv.style.bottom = "0";
                 targetDiv.style.position = "fixed";
                 let scrollPercent = scrollTop / maxScroll;
-                let scale = 1 + scrollPercent * 15;
+                let scale = 1 + scrollPercent * 10;
 
                 circleBackground.style.display = "block";
                 circleBackground.style.transform = `scale(${scale <= 1 ? 1 : scale})`;
