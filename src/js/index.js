@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const targetDiv = document.querySelector('#content_move');
-    const title = document.querySelector('#content_move > h1');
+    const title = document.querySelector('#content_move > .content');
     const zoomImage = document.getElementById('zoomImage');
     const circleBackground = document.getElementById('circleBackground');
     const header = document.querySelector('.header');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 targetDiv.style.bottom = "0";
                 targetDiv.style.position = "fixed";
                 let scrollPercent = scrollTop / maxScroll;
-                let scale = 1 + scrollPercent * 10;
+                let scale = 1 + scrollPercent * 1;
 
                 circleBackground.style.display = "block";
                 circleBackground.style.transform = `scale(${scale <= 1 ? 1 : scale})`;
