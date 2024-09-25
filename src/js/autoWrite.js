@@ -1,6 +1,6 @@
 const l_sText = "Améliorer ";
 const l_lWord = ["le future", "mes compétences"];
-const l_eTitle = document.querySelector('#content_move > .content > .same_line > p');
+const l_eTitle = document.querySelector('#content_move > .content > .title_div > .same_line > p');
 let l_iCurrWord = 0;
 
 l_eTitle.innerHTML = l_sText + l_lWord[l_iCurrWord] ;
@@ -28,7 +28,7 @@ function F_vAnim() {
         i++;
 
         if (i <= l_lWord[l_iCurrWord].length) {
-            setTimeout(Remove, 125);
+            setTimeout(Remove, 50);
         } else {
             l_iCurrWord = (l_iCurrWord + 1) % l_lWord.length;
             i = 0;

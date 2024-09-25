@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function()
+{
     const targetDiv = document.querySelector('#content_move');
     const title = document.querySelector('#content_move > .content');
     const zoomImage = document.getElementById('zoomImage');
@@ -11,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let scaleCurr = scaleBase;
     title.style.transform = `scale(${scaleBase})`;
 
-    function onScroll() {
+    function onScroll()
+    {
         let scrollTop = window.scrollY;
 
 
@@ -19,8 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const Position = header.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        if (!isZoomed) {
-            if (Position.bottom > windowHeight) {
+        if (!isZoomed)
+        {
+            if (Position.bottom > windowHeight)
+            {
                 targetDiv.style.bottom = "0";
                 targetDiv.style.position = "fixed";
                 let scrollPercent = scrollTop / maxScroll;
